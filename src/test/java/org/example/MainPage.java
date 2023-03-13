@@ -16,4 +16,10 @@ public class MainPage {
 
     public void clickABTestingLink() {
         ABTestingLink.click(); }
+
+    @FindBy(xpath = "//*[contains(text(), 'Add/Remove Elements')]")
+    private WebElement AddRemoveLink;
+
+    public void clickAddRemoveLink() {
+        AddRemoveLink.click(); }
 }
