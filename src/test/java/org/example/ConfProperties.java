@@ -13,7 +13,6 @@ public class ConfProperties {
     public static Properties initProperties() {
         Properties properties = new Properties();
         try (FileInputStream fileInputStream = new FileInputStream("src/test/sources/conf.properties")) {
-            //указание пути до файла с настройками
             properties.load(fileInputStream);
         } catch (Exception e) {
             System.out.println("Can't read properties");
@@ -23,9 +22,6 @@ public class ConfProperties {
         return properties;
     }
 
-    /**
-     * метод для возврата строки со значением из файла с настройками
-     */
     public static String getProperty(String key) {
         if (properties == null) {
             properties = initProperties();
